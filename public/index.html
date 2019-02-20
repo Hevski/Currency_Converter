@@ -12,31 +12,35 @@
 <body>
   <h1>Currenty Converter</h1>
 <div id="app">
-  <div>
+  <div id="converter-container">
+  <div class="converter">
+    <label for="exchange">Enter Amount</label>
     <input type="number" v-model="exchangeAmount">
   </div>
-  <div>
+  <div class="converter">
     <label for="currency_select">Exchange From</label>
     <select v-on:change="currencySelect"name="" id="currency_select" v-model="fromCurrencyIndex">
     <option disable value="">Select a currency</option>
     <option v-for="(rate, key) in exchangeRates" :value="key">{{key}}: {{rate}}</option>
     </select>
   </div>
-  <div>
+  <div class="converter">
     <label for="currency_select">Exchange To</label>
     <select v-on:change="currencySelect"name="" id="currency_select" v-model="toCurrencyIndex">
     <option disable value="">Select a currency</option>
     <option v-for="(rate, key) in exchangeRates" :value="key">{{key}}: {{rate}}</option>
     </select>
   </div>
-  <div>
+  <div class="converter">
     <button v-on:click="exchangeCurrency">Exchange Currency</button>
   </div>
-  <div>
+  <div class="converter">
     <p>{{result}}</p>
   </div>
-  <div>
-    <p v-for="(rate, key) in exchangeRates">{{key}}: {{rate}}</p>
+</div>
+<h2>All Rates</h2>
+  <div class="rates">
+    <p class="all-rates" v-for="(rate, key) in exchangeRates">{{key}}: {{rate}}</p>
   </div>
 </div>
 </body>

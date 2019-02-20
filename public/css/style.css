@@ -1,3 +1,37 @@
 * {
   font-family: 'B612', sans-serif;
+  text-align: center;
+}
+
+.converter {
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+}
+
+#converter-container {
+  border-style: double;
+  padding: 13px;
+  width: 300px;
+  margin: auto;
+  border-radius: 10px;
+  background: antiquewhite;
+}
+
+.rates {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.all-rates {
+  display: flex;
+  padding: 12px;
+  margin: 3px;
+  border-style: groove;
+  max-width: 70px;
+  max-height: 70px;
+  background: beige;
+  border-radius: 5px;
 }
