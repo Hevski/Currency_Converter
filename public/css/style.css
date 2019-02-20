@@ -9,6 +9,15 @@
   padding: 7px;
 }
 
+.result {
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+  font-size: 32px;
+  margin-top: -27px;
+  margin-bottom: -21px;
+}
+
 #converter-container {
   border-style: double;
   padding: 13px;

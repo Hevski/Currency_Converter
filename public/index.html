@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=B612" rel="stylesheet">
 </head>
 <body>
-  <h1>Currenty Converter</h1>
+  <h1>Currency Converter</h1>
 <div id="app">
   <div id="converter-container">
   <div class="converter">
@@ -19,7 +19,7 @@
   </div>
   <div class="converter">
     <label for="currency_select">Exchange From</label>
-    <select v-on:change="currencySelect"name="" id="currency_select" v-model="fromCurrencyIndex">
+    <select @change="currencySelect"name="" id="currency_select" v-model="fromCurrencyIndex">
     <option disable value="">Select a currency</option>
     <option v-for="(rate, key) in exchangeRates" :value="key">{{key}}: {{rate}}</option>
     </select>
@@ -34,7 +34,7 @@
   <div class="converter">
     <button v-on:click="exchangeCurrency">Exchange Currency</button>
   </div>
-  <div class="converter">
+  <div class="result">
     <p>{{result}}</p>
   </div>
 </div>
