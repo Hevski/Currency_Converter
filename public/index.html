@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Currency Converter</title>
+	<script src="./js/bundle.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=B612" rel="stylesheet">
+</head>
+<body>
+  <h1>Currenty Converter</h1>
+<div id="app">
+  <div>
+    <input type="number" v-model="exchangeAmount">
+  </div>
+  <div>
+    <label for="currency_select">Exchange From</label>
+    <select v-on:change="currencySelect"name="" id="currency_select" v-model="fromCurrencyIndex">
+    <option disable value="">Select a currency</option>
+    <option v-for="(rate, key) in exchangeRates" :value="key">{{key}}: {{rate}}</option>
+    </select>
+  </div>
+  <div>
+    <label for="currency_select">Exchange To</label>
+    <select v-on:change="currencySelect"name="" id="currency_select" v-model="toCurrencyIndex">
+    <option disable value="">Select a currency</option>
+    <option v-for="(rate, key) in exchangeRates" :value="key">{{key}}: {{rate}}</option>
+    </select>
+  </div>
+  <div>
+    <button v-on:click="exchangeCurrency">Exchange Currency</button>
+  </div>
+  <div>
+    <p>{{result}}</p>
+  </div>
+  <div>
+    <p v-for="(rate, key) in exchangeRates">{{key}}: {{rate}}</p>
+  </div>
+</div>
+</body>
+</html>
